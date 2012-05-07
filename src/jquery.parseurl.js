@@ -8,7 +8,7 @@
  */
 
 /**
- * Joe Zim's jQuery URL Parser Plugin (JZ URL Parser)
+ * Joe Zim's jQuery URL Parser Plugin (JZ Parse URL)
  * Version: 1.0
  * Supported jQuery Versions: 1.4.3+
  *
