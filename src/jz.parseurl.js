@@ -8,9 +8,8 @@
  */
 
 /**
- * Joe Zim's jQuery URL Parser Plugin (JZ Parse URL)
+ * Joe Zim's URL Parser Plugin (JZ Parse URL)
  * Version: 1.0
- * Supported jQuery Versions: 1.4.3+
  *
  * This plugin uses the technique discussed in the Gist by John Long to parse
  * a URL via the DOM's automatic href parsing on anchor elements. It also 
@@ -24,26 +23,24 @@
  *
  * USAGE
  * To parse a full URL, just pass the entire URL as a string as the sole
- * parameter to jQuery.parseUrl (or JZ.parseUrl if jQuery was not loaded before
- * this plugin was).
+ * parameter to JZ.parseUrl.
  *
- * $.parseUrl("http://example.com:3000/pathname/?search=test#hash");
+ * JZ.parseUrl("http://example.com:3000/pathname/?search=test#hash");
  *
  *
  * To parse a URL relative to this page's URL, pass in a partial URL as a
- * string as the sole parameter to jQuery.parseUrl (or JZ.parseUrl if jQuery
- * was not loaded before this plugin was).
+ * string as the sole parameter to JZ.parseUrl.
  *
- * $.parseUrl("/contact");
+ * JZ.parseUrl("/contact");
  *
  *
  * To parse the current URL of the page that you are on, then do not pass in
  * any parameters.
  *
- * $.parseUrl();
+ * JZ.parseUrl();
  *
  *
- * The object returned from $.parseUrl has several properties containing the
+ * The object returned from JZ.parseUrl has several properties containing the
  * different parts of a URL. If I ran the first example with the full URL, I
  * would receive the following object back:
  *
@@ -142,7 +139,7 @@
 		}
 	}
 
-	/* jQuery utility method to take a URL and parse it via the DOM's built-in
+	/* Utility method to take a URL and parse it via the DOM's built-in
 	parsing methods on anchor elements and window.location. */
 	$.parseUrl = function( url ) {
 		var link = createLink( url );
@@ -159,4 +156,4 @@
 		return Parser(link);
 	};
 
-}( jQuery || JZ, window ));
+}( JZ, window ));
