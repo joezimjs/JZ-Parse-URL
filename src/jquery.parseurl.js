@@ -66,15 +66,17 @@
  * access to each of the parameters.
  */
 
-;var JZ = JZ || {};
+var JZ = JZ || {};
+var jQuery = jQuery || null;
 
 (function( $, window, undefined ) {
 	'use strict';
 
 	var document = window.document;
-	var props = ['hash', 'host', 'hostname', 'href', 'path', 'pathname', 'port', 'protocol', 'query', 'search', 'url'];
 
 	var createLink = function( url ) {
+		var link;
+
 		// If a URL was provided, create an anchor tag
 		if ( url && typeof(url) === "string" ) {
 			var div = document.createElement('div');
@@ -87,7 +89,9 @@
 		// Otherwise use the current URL
 		else {
 			link = window.location;
-		}		
+		}
+
+		return link;
 	}
 	
 	// Some browser do not have the leading slash. Add it
@@ -128,13 +132,21 @@
 		return params;
 	};
 
-	var Parser = function ( link ) {		
-		var i = props.length;
-
-		// Copy useful link properties to the parser object
-		while (i--) {
-			this[props[i]] = link[props[i]];
-		}
+	// Parse object that is returned that contains all of the properties
+	// and logic.
+	var Parser = function ( link ) {
+		// Assign properties
+		this.hash 		= link.hash;
+		this.host 		= link.host;
+		this.hostname	= link.hostname;
+		this.href		= link.href;
+		this.path 		= normalizePath( link.pathname );
+		this.pathname	= this.path;
+		this.port 		= link.port;
+		this.protocol	= link.protocol;
+		this.query 		= parseQueryString( link.search );
+		this.search		= link.search;
+		this.url		= link.href;
 
 		// Object function that returns query parameter values.
 		this.get = function ( param ) {
@@ -142,21 +154,12 @@
 		}
 	}
 
-	/* jQuery utility method to take a URL and parse it via the DOM's built-in
-	parsing methods on anchor elements and window.location. */
+	// jQuery utility method to take a URL and parse it via the DOM's built-in
+	// parsing methods on anchor elements and window.location. 
 	$.parseUrl = function( url ) {
 		var link = createLink( url );
 
-		// Parse query string into object
-		link.query = parseQueryString(link.search);
-
-		// Create .path as alias for pathname
-		link.path = link.pathname = normalizePath( link.path );
-
-		// Create .url as alias for href
-		link.url = link.href;
-
-		return Parser(link);
+		return new Parser(link);
 	};
 
-}( jQuery || JZ, window ));
+}( (jQuery || JZ), window ));

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+	<script type="text/javascript" src="src/jquery.parseurl.min.js"></script>
+	<script type="text/javascript">
+		var url = JZ.parseUrl();
+		console.log(url);
+
+		url = JZ.parseUrl("http://example.com:3000/pathname/?search=test&param%202=some%20value&unaryVar#hash");
+		console.log(url);
+	</script>
+</body>
+</html>
