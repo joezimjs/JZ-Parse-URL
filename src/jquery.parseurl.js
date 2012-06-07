@@ -1,17 +1,14 @@
 /**
- * Copyright (c) 2012 Joseph Zimmerman http://joezimjs.com
- * 
- * This script is licensed under the 
- * GNU General Public License, version 3 (GPL-3.0)
- * http://www.opensource.org/licenses/gpl-3.0.html
- *
- */
-
-/**
  * Joe Zim's jQuery URL Parser Plugin (JZ Parse URL)
  * Version: 1.0
  * Supported jQuery Versions: 1.4.3+
  *
+ * Copyright (c) 2012 Joseph Zimmerman http://joezimjs.com
+ * License: http://www.opensource.org/licenses/gpl-3.0.html
+ *
+ */
+
+/**
  * This plugin uses the technique discussed in the Gist by John Long to parse
  * a URL via the DOM's automatic href parsing on anchor elements. It also 
  * creates a couple aliases (path for pathname; url for href) for shorter and
@@ -66,8 +63,9 @@
  * access to each of the parameters.
  */
 
-var JZ = JZ || {};
-var jQuery = jQuery || null;
+if ( !window.jQuery) {
+	window.JZ = window.JZ || {};
+}
 
 (function( $, window, undefined ) {
 	'use strict';
@@ -162,4 +160,4 @@ var jQuery = jQuery || null;
 		return new Parser(link);
 	};
 
-}( (jQuery || JZ), window ));
+}( (window.jQuery || window.JZ), window ));
