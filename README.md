@@ -4,7 +4,9 @@
 
 **This library is no longer supported. It was more of a proof of concept than anything and there are far better libraries for parsing URLs out there. If you are in Node.js, you can use their built-in [URL API](https://nodejs.org/api/url.html), or in the browser you can use something like [URI.js](http://medialize.github.io/URI.js/).**
 
-![JZ Parse URL Logo](/wp-content/uploads/parse_url_logo.png "JZ Parse URL Logo")Generally, the fastest way to parse a URL is via a regular expression. Obviously, not everyone is good with regular expressions and would rather use a plugin or library. This script is here for those people, but does not use a regular expression. Instead it uses the DOM to parse the URL and then throws a few extra bits in to make things better and more useable. This jQuery plugin can also be used as a standalone library: if jQuery is not loaded when this script is loaded, then `parseUrl` is attached to a global object named `JZ`. If you experience any bugs, please [report them as an issue on GitHub](https://github.com/joezimjs/JZ-Parse-URL/issues "Issue Reporting").
+![JZ Parse URL Logo](http://joezimjs.com/wp-content/uploads/parse_url_logo.png "JZ Parse URL Logo")
+
+Generally, the fastest way to parse a URL is via a regular expression. Obviously, not everyone is good with regular expressions and would rather use a plugin or library. This script is here for those people, but does not use a regular expression. Instead it uses the DOM to parse the URL and then throws a few extra bits in to make things better and more useable. This jQuery plugin can also be used as a standalone library: if jQuery is not loaded when this script is loaded, then `parseUrl` is attached to a global object named `JZ`. If you experience any bugs, please [report them as an issue](https://github.com/joezimjs/JZ-Parse-URL/issues "Issue Reporting").
 
 ## Table of Contents
 
@@ -17,7 +19,7 @@
 
 ## Download
 
-JZ Parse URL is currently on version 1.0\. You can [view the version history here](#toc-version). Go to the [JZ Parse URL GitHub Repository](https://github.com/joezimjs/JZ-Parse-URL "GitHub Repository for JZ Parse URL jQuery Plugin") to download and view the tests.
+JZ Parse URL is currently on version 1.0\. You can [view the version history here](#toc-version). You may use Github's built in links to download and view the tests or simply clone the repo.
 
 ## Documentation
 
