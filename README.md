@@ -8,23 +8,24 @@
 
 ## Table of Contents
 
-*   [Download](#toc-download)
-*   [Dependencies](#toc-dep)
-*   [$.parseUrl()](#toc-parse)
-*   [Properties](#toc-props)
-*   [Version History](#toc-version)
+*   [Download](#download)
+*   [Documentation](#documentation)
+*   [Dependencies](#dependencies)
+*   [$.parseUrl()](#parseurl)
+*   [Properties](#properties)
+*   [Version History](#version-history)
 
-## <span id="toc-download">Download</span>
+## Download
 
 JZ Parse URL is currently on version 1.0\. You can [view the version history here](#toc-version). Go to the [JZ Parse URL GitHub Repository](https://github.com/joezimjs/JZ-Parse-URL "GitHub Repository for JZ Parse URL jQuery Plugin") to download and view the tests.
 
 ## Documentation
 
-### <span id="toc-dep">Dependencies</span>
+### Dependencies
 
 JZ Parse URL is not dependent on any libraries, though it is designed to attach itself to `jQuery` as a utility function if it's available. No specific version of jQuery is required.
 
-### <span id="toc-parse">$.parseUrl()</span>
+### $.parseUrl()
 
 **`jQuery.parseUrl( [url] ) or JZ.parseUrl( [url] )`**
 
@@ -49,7 +50,7 @@ $.parseUrl("/contact");
 $.parseUrl();
 ```
 
-### <span id="toc-props">Properties</span>
+### Properties
 
 When `parseUrl` is invoked, it returns an object with several properties. You can see those properties listed below and example of what they would be:
 
@@ -73,7 +74,7 @@ When `parseUrl` is invoked, it returns an object with several properties. You ca
 
 The `path` property is an alias for `pathname`. The `url` property is an alias for `href`. The `query` property is `search` converted into an object for simple access to each of the parameters.
 
-### <span id="toc-version">Version History</span>
+### Version History
 
 - **Version 1.0**: ([May 23, 2012 Announcement](/javascript/new-project-released-jz-parse-url-jquery-plugin/ "New Project Released: JZ Parse URL jQuery Plugin"))
-  * Original Release.
+  - Original Release.
